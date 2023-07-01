@@ -11,6 +11,8 @@ pub fn build(b: *std.Build.Builder) void {
         &[_][]const u8{},
     );
 
+    plog.installHeadersDirectory("include/", "./");
+
     plog.addIncludePath("include/");
     b.installArtifact(plog);
 }
